@@ -1,0 +1,107 @@
+.about-page {
+  height: 100vh;
+  background: var(--secondary-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+}
+.about-header {
+  font-weight: 900;
+  font-size: 4rem;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 0px var(--white);
+}
+.about-main-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  background-color: var(--ticket-card);
+  box-shadow: 15px 15px 0px 0px var(--primary-color);
+  padding: 3rem 2rem;
+}
+.about-map-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 40vh;
+}
+.about-map {
+  width: 35%;
+}
+.about-map iframe {
+  width: 100%;
+  height: 100%;
+  background-color: var(--ticket-card);
+  box-shadow: 15px 15px 0px 0px var(--primary-color);
+}
+.about-map-text {
+  width: 60%;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+}
+.about-map-text {
+  background-color: var(--ticket-card);
+  box-shadow: 15px 15px 0px 0px var(--primary-color);
+  padding: 3rem 2rem;
+}
+@media screen and (max-width: 1299px) {
+  .about-page {
+    height: auto;
+    padding: 4rem;
+    overflow: hidden;
+    gap: 3rem;
+  }
+
+  .about-header {
+    font-size: 4rem;
+  }
+  .about-map-container {
+    flex-direction: column;
+    height: auto;
+    gap: 3rem;
+  }
+  .about-map {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .about-map-text {
+    width: 100%;
+  }
+
+  .about-main-text,
+  .about-map-text {
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about-page {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .about-header {
+    font-size: 2.5rem;
+  }
+
+  .about-map-container {
+    gap: 2rem;
+  }
+
+  .about-main-text,
+  .about-map-text {
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+  }
+}

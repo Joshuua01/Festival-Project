@@ -1,0 +1,212 @@
+@import url(./navbar.css);
+@import url(./landing-page.css);
+@import url(./tickets-page.css);
+@import url(./lineup-page.css);
+@import url(./about-page.css);
+
+/* Global Styles */
+:root {
+  --primary-color: #6734aa;
+  --secondary-color: #fa4c77;
+  --primary-bg: #6734aa;
+  --secondary-bg: linear-gradient(
+    to bottom,
+    #17212a,
+    #18222c,
+    #1a232d,
+    #1b242f,
+    #1d2530
+  );
+  --ticket-card: #d35776;
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inter;
+  color: white;
+}
+/* Page Loader */
+#preloader-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--secondary-bg);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  transition: all 1s ease-in-out;
+}
+#preloader-bg.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.preloader-header {
+  font-weight: 900;
+  font-size: 4rem;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 0px var(--white);
+}
+@media screen and (max-width: 768px) {
+  .preloader-header {
+    font-size: 3rem;
+  }
+}
+.preloader-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 10vh;
+}
+.circle {
+  background-color: var(--secondary-color);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  -webkit-animation: circleAnimation 1s infinite ease-in-out;
+  animation: circleAnimation 1s infinite ease-in-out;
+}
+.circle:nth-child(1) {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+.circle:nth-child(2) {
+  background-color: white;
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.circle:nth-child(3) {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+.circle:nth-child(4) {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+  background-color: white;
+}
+.circle:nth-child(5) {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+@keyframes circleAnimation {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  20% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px) scale(1.4);
+  }
+}
+/* Clock Style */
+.clock {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.clock div {
+  height: 170px;
+  width: 175px;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  box-shadow: 15px 15px 0px 0px var(--secondary-color);
+  font-weight: 900;
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 0px var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Main Page Styles */
+#page-container {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+section {
+  scroll-snap-align: start;
+}
+.arrows-container {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+.arrows-container i {
+  font-size: 4rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 1px 3px 0px rgba(255, 255, 255);
+}
+.arrows-container i:hover {
+  text-shadow: none;
+  color: var(--white);
+}
+@media screen and (max-width: 1299px) {
+  .arrows-container {
+    display: none;
+  }
+
+  #page-container {
+    scroll-snap-type: none;
+    overflow-y: auto;
+    height: auto;
+  }
+  .clock {
+    gap: 2rem;
+  }
+
+  .clock div {
+    height: 120px;
+    width: 120px;
+    padding: 0.5rem;
+    box-shadow: 10px 10px 0px 0px var(--secondary-color);
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 0px var(--white);
+  }
+}
+@media screen and (max-width: 480px) {
+  .arrows-container {
+    display: none;
+  }
+
+  #page-container {
+    scroll-snap-type: none;
+    overflow-y: auto;
+    height: auto;
+  }
+  .clock {
+    gap: 1rem;
+  }
+
+  .clock div {
+    height: 75px;
+    width: 75px;
+    padding: 0.5rem;
+    box-shadow: 10px 10px 0px 0px var(--secondary-color);
+    font-size: 2.2rem;
+    text-shadow: 1px 1px 0px var(--white);
+  }
+}

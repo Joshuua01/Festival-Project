@@ -1,0 +1,142 @@
+.lineup-page {
+  height: 100vh;
+  background: var(--secondary-bg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem 4rem;
+  gap: 4rem;
+}
+.lineup-header {
+  font-weight: 900;
+  font-size: 4rem;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 0px var(--white);
+}
+.lineups-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.lineup-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--ticket-card);
+  box-shadow: 15px 15px 0px 0px var(--primary-color);
+  padding: 2rem 4rem;
+}
+.lineup-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lineup-main span:nth-child(1),
+.lineup-main span:nth-child(3) {
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 0px var(--white);
+  flex: 25%;
+  text-align: center;
+}
+.lineup-main span:nth-child(2) {
+  font-weight: 900;
+  font-size: 4rem;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 0px var(--white);
+  flex: 50%;
+  text-align: center;
+}
+.lineup-block div:nth-child(2) {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.lineup-block div:nth-child(3) {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.dot {
+  color: var(--primary-color);
+}
+@media screen and (max-width: 1299px) {
+  .lineup-page {
+    padding: 4rem 4rem;
+    height: auto;
+  }
+
+  .lineup-header {
+    font-size: 4rem;
+  }
+
+  .lineups-container {
+    width: 80%;
+  }
+
+  .lineup-block {
+    padding: 3rem 2rem;
+  }
+
+  .lineup-main span:nth-child(1),
+  .lineup-main span:nth-child(3) {
+    font-size: 2rem;
+    text-shadow: 2px 2px 0px var(--white);
+  }
+
+  .lineup-main span:nth-child(2) {
+    font-size: 2.6rem;
+    text-shadow: 2px 2px 0px var(--white);
+  }
+
+  .lineup-block div:nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .lineup-block div:nth-child(3) {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .lineup-page {
+    padding: 4rem 2rem;
+    height: auto;
+  }
+
+  .lineup-header {
+    font-size: 2.5rem;
+  }
+
+  .lineups-container {
+    width: 100%;
+  }
+
+  .lineup-block {
+    padding: 2rem 1rem;
+  }
+
+  .lineup-main span:nth-child(1),
+  .lineup-main span:nth-child(3) {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 0px var(--white);
+  }
+
+  .lineup-main span:nth-child(2) {
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 0px var(--white);
+  }
+
+  .lineup-block div:nth-child(2) {
+    font-size: 1.2rem;
+  }
+
+  .lineup-block div:nth-child(3) {
+    font-size: 1rem;
+  }
+}

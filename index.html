@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/icon.PNG" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <script
+      src="https://kit.fontawesome.com/1bf5d89cf4.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Festival</title>
+  </head>
+  <body>
+    <div id="preloader-bg">
+      <div class="preloader-header">LOADING</div>
+      <div class="preloader-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="preloader-header">FESTIVAL</div>
+    </div>
+    <div class="navbar">
+      <div class="navbar-logo">
+        <h1 class="navbar-logo-text">FESTIVAL</h1>
+      </div>
+      <div class="navbar-links">
+        <a href="#Home" class="navbar-item navbar-item-active">Home</a>
+        <a href="#Tickets" class="navbar-item">Tickets</a>
+        <a href="#Lineup" class="navbar-item">Line-up</a>
+        <a href="#About" class="navbar-item">About</a>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <div class="arrows-container">
+      <i id="arrow-up" class="fa-solid fa-caret-up" onclick="ArrowUp()"></i>
+      <i
+        id="arrow-down"
+        class="fa-solid fa-caret-down"
+        onclick="ArrowDown()"
+      ></i>
+    </div>
+    <div id="page-container">
+      <section id="Home">
+        <div class="landing-page">
+          <div class="clock">
+            <div id="day">00</div>
+            <div id="hour">00</div>
+            <div id="minute">00</div>
+            <div id="second">00</div>
+          </div>
+          <div class="landing-page-text">
+            <div>
+              12-13 MAY,<br />
+              2023
+            </div>
+          </div>
+          <div class="landing-page-text-button">
+            <button onclick="scrollToTickets()">BUY TICKETS</button>
+          </div>
+        </div>
+      </section>
+      <section id="Tickets">
+        <div class="tickets-page">
+          <div class="tickets-header">- TICKETS -</div>
+          <div class="cards-container">
+            <div class="card">
+              <div class="card-header">
+                REGULAR <br />
+                $400
+              </div>
+              <div class="card-content">
+                <span class="card-content-text"> FESTIVAL ENTRY </span>
+                <span class="card-content-text"> STANDARD EXPERIENCE </span>
+                <span class="card-content-text"> AFFORDABLE </span>
+              </div>
+              <div class="card-button">
+                <button>BUY NOW</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                COMFORT <br />
+                $600
+              </div>
+              <div class="card-content">
+                <span class="card-content-text"> PRIORITY ACCESS </span>
+                <span class="card-content-text"> COMFORTABLE SEATINGS </span>
+                <span class="card-content-text"> ENCHANCED EXPERIENCE </span>
+              </div>
+              <div class="card-button">
+                <button>BUY NOW</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                VIP <br />
+                $1000
+              </div>
+              <div class="card-content">
+                <span class="card-content-text"> MEET-AND-GREET </span>
+                <span class="card-content-text"> PREMIUM SEATINGS </span>
+                <span class="card-content-text"> FOOD AND DRINKS </span>
+                <span class="card-content-text"> LUXURIOUS EXPERIENCE </span>
+              </div>
+              <div class="card-button">
+                <button>BUY NOW</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Lineup">
+        <div class="lineup-page">
+          <div class="lineup-header">- LINEUP -</div>
+          <div class="lineups-container">
+            <div class="lineup-block">
+              <div class="lineup-main">
+                <span>SAT</span>
+                <span>DUA LIPA</span>
+                <span>11 AUG</span>
+              </div>
+              <div>
+                KENDRICK LAMAR <span class="dot">&#8226;</span> J BALVIN
+                <span class="dot">&#8226;</span> 21 SAVAGE
+              </div>
+              <div>
+                DRAKE <span class="dot">&#8226;</span> THE WEEKND
+                <span class="dot">&#8226;</span> POST MALONE
+                <span class="dot">&#8226;</span> LIL PEEP
+                <span class="dot">&#8226;</span> LIL UZI VERT
+                <span class="dot">&#8226;</span> LIL SKIES
+              </div>
+            </div>
+            <div class="lineup-block">
+              <div class="lineup-main">
+                <span>SUN</span>
+                <span>DRAKE</span>
+                <span>12 AUG</span>
+              </div>
+              <div>
+                BIGGIE CHEESE<span class="dot">&#8226;</span> KANYE WEST
+                <span class="dot">&#8226;</span> JAY-Z
+              </div>
+              <div>
+                DRAKE <span class="dot">&#8226;</span> YOUNG LEOSIA
+                <span class="dot">&#8226;</span> SEAN PAUL
+                <span class="dot">&#8226;</span> RIHANNA
+                <span class="dot">&#8226;</span> JOSEPH BRATAN
+                <span class="dot">&#8226;</span> DR. DRE
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="About">
+        <div class="about-page">
+          <div class="about-header">- ABOUT -</div>
+          <div class="about-main-text">
+            We are a celebration of culture, community, and creativity.
+            <br />Join us for exciting events, performances, and activities that
+            bring together people from all walks of life. <br />From live
+            concerts to interactive art installations, there is something for
+            everyone to enjoy. <br />We take pride in showcasing local talent
+            and highlighting the unique cultural traditions of our region.<br />
+            We are committed to providing a safe and inclusive environment for
+            all festival attendees. <br />We hope to see you at our next event!
+          </div>
+          <div class="about-map-container">
+            <div class="about-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.96757560944!2d19.93895991567379!3d50.06816887942446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b053d076b5d%3A0x3c2561cb07bc3dd2!2sWy%C5%BCsza%20Szko%C5%82a%20Ekonomii%20i%20Informatyki%20w%20Krakowie!5e0!3m2!1spl!2spl!4v1679939917088!5m2!1spl!2spl"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="about-map-text">
+              <span>
+                If you are traveling by car, there is ample parking available on
+                site. <br />We recommend carpooling with friends or using a
+                ride-sharing service to help reduce traffic and emissions.
+                <br />
+                <br />For those using public transportation, Św. Filipa 17 has a
+                variety of bus and train options that will bring you within a
+                short walking distance of the festival venue. <br />Please check
+                with your local transit authority for schedules and routes.
+                <br />
+                <br />If you are coming from out of town, there are several
+                nearby hotels and accommodations available for your stay.
+                <br />We recommend booking early to ensure availability during
+                the festival dates.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

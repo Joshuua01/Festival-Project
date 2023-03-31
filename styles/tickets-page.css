@@ -1,0 +1,111 @@
+.tickets-page {
+  min-height: 100vh;
+  background-image: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  padding-top: 6rem;
+  flex-direction: column;
+}
+.tickets-header {
+  font-weight: 900;
+  font-size: 4rem;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 0px var(--white);
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding-top: 3rem;
+  gap: 3rem;
+}
+.card {
+  background-color: var(--ticket-card);
+  box-shadow: 15px 15px 0px 0px var(--primary-color);
+  padding: 3rem 2rem;
+  width: 25%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-header {
+  font-weight: 900;
+  font-size: 2.4rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  height: 20%;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 60%;
+}
+.card-content-text {
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+}
+.card-button {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.card-button button {
+  border: 1px solid white;
+  background-color: transparent;
+  box-shadow: 15px 15px 0px 0px var(--primary-color);
+  width: 80%;
+  padding: 20px 0;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+.card-button button:hover {
+  background-color: white;
+  color: var(--secondary-color);
+  border: 1px solid white;
+  box-shadow: none;
+}
+@media screen and (max-width: 1299px) {
+  .tickets-page {
+    height: auto;
+    padding-bottom: 5rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  .card {
+    width: 60%;
+  }
+  .card-content-text {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tickets-header {
+    font-size: 2.5rem;
+  }
+
+  .card-header {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    width: 75%;
+  }
+}
