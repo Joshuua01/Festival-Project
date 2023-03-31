@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 6rem 5rem;
 }
 .about-header {
   font-weight: 900;
@@ -23,7 +23,7 @@
   line-height: 1.5;
   background-color: var(--ticket-card);
   box-shadow: 15px 15px 0px 0px var(--primary-color);
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
 }
 .about-map-container {
   display: flex;
@@ -41,16 +41,17 @@
   box-shadow: 15px 15px 0px 0px var(--primary-color);
 }
 .about-map-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60%;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.1rem;
   line-height: 1.5;
-}
-.about-map-text {
   background-color: var(--ticket-card);
   box-shadow: 15px 15px 0px 0px var(--primary-color);
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
 }
 @media screen and (max-width: 1299px) {
   .about-page {
